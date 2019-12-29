@@ -12,16 +12,11 @@ comments: false
 * 2019DSEC Junior Hacking Championship 스틸리언상 수상
 * 2019전국 고등학생 정보보안경진대회 3위
 * 2019크리스마스 CTF 20위...
-* 
 
 
 ## Project
 
-{% capture images %}
-//링크 첨부
-{% endcapture %}
-{% include gallery images=images caption="Screenshots of Moon Theme" cols=2 %}
-//링크 첨부
+
 
 ## Join us
 
