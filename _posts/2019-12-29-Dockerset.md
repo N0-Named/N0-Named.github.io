@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Docker에서의 Pwnable 환경 구축"
+title: "Pwnable Setting"
 date: 2019-12-29    
 tags: [docker,pwnable,hacking,setting,linux,system]
 comments: true
