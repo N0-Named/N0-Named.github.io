@@ -1,4 +1,14 @@
 
+
+---
+layout: post
+title:  Docker에서 Pwnable 환경 구축
+date:   2019-12-29 13:16:01 -0600
+category : Hacking
+
+---
+
+
 # Docker에서 Pwnable 환경 구축
 
 저는 macOS를 사용하고 있어서 Pwnable을 할때 늘 VMware에 Ubuntu를 설치해서 사용해왔습니다. 하지만, 128GB를 사용하고 있어서 용량이 늘 부족합니다. 그래서 생각한 것이 docker를 이용해서 환경을 구축해보면 어떨까? 라는 생각을 하게 되었고, 찾아보니 이미 그렇게 사용하는 사람들이 많이 있었습니다.
