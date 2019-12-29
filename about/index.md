@@ -9,9 +9,9 @@ comments: false
 <center><a href="https://n0-named.github.io//"><b>N0Named</b></a> is a security study in ROK</center>
 
 ## Activity
-* 2019DSEC Junior Hacking Championship 스틸리언상 수상
-* 2019전국 고등학생 정보보안경진대회 3위
-* 2019크리스마스 CTF 20위...
+* 2019 DSEC Junior Hacking Championship 스틸리언상 수상
+* 2019 전국 고등학생 정보보안경진대회 3위
+* 2019 크리스마스 CTF 20위
 
 
 ## Project
