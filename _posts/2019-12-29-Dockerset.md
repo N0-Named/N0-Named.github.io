@@ -6,7 +6,6 @@ tags: [docker,pwnable,hacking,setting,linux,system]
 comments: false
 ---
 Docker를 사용하여 포너블과 바이너리 분석을 하기에 편리한 환경을 구축할 수 있다.
-# Docker에서 Pwnable 환경 구축
 
 저는 macOS를 사용하고 있어서 Pwnable을 할때 늘 VMware에 Ubuntu를 설치해서 사용해왔습니다. 하지만, 128GB를 사용하고 있어서 용량이 늘 부족합니다. 그래서 생각한 것이 docker를 이용해서 환경을 구축해보면 어떨까? 라는 생각을 하게 되었고, 찾아보니 이미 그렇게 사용하는 사람들이 많이 있었습니다.
 
