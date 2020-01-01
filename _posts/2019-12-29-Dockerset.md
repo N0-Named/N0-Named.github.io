@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Pwnable Setting"
+title: "Pwnable"
 date: 2019-12-29    
 tags: [docker,pwnable,hacking,setting,linux,system]
 comments: false
