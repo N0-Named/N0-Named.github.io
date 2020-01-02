@@ -5,13 +5,13 @@
 <p>Radare2를 사용하여 리버스 엔지니어링 해보자.</p>
 <p>&nbsp;</p>
 <h1>간단한 소개</h1>
-<hr />
+<p>&nbsp;</p>
 <blockquote><p><strong>Radare2는</strong> 리버스 엔지니어링 툴(프레임워크)로 gdb와 같이 <strong>동적분석을</strong> 할 수 있다.  또한 우리에겐 매우 편리한 인터랙티브 쉘로 구성되어 있어서 리눅스에서 평소 사용하던 명령어들을 그대로 이용할 수 있다.  그리고 여러 강력한 기능을 제공하고 전부는 아니지만 최대한 많이 담아 볼 예정이다.</p>
 </blockquote>
 <p>&nbsp;</p>
-<hr />
+<p>&nbsp;</p>
 <h1>설치</h1>
-<hr />
+<p>&nbsp;</p>
 <pre><code class='language-shell' lang='shell'>1. $  git clone https://github.com/radare/radare2.git
 2. $  cd radare2/sys/
 3. $  ./install.sh
@@ -24,7 +24,7 @@
 </li>
 
 </ul>
-<hr />
+<p>&nbsp;</p>
 <h1>목차</h1>
 <h3>1. instruction</h3>
 <h3>2. rabin2</h3>
@@ -35,7 +35,6 @@
 <h3>7. rasm2</h3>
 <h3>8. r2 + CTF 문제 분석</h3>
 <p>&nbsp;</p>
-<hr> 
 <h1>instructon</h1>
 <h4>1. 분석을 위한 간단한 명령어들</h4>
 <ul>
