@@ -26,7 +26,7 @@ Radare2를 이용한 리버스 엔지니어링을 Araboza
 
 ------
 
-```bash
+```haxe
 1. $  git clone https://github.com/radare/radare2.git
 2. $  cd radare2/sys/
 3. $  ./install.sh
