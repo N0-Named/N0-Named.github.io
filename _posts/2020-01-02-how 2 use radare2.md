@@ -150,8 +150,8 @@ Radare2를 이용한 리버스 엔지니어링을 Araboza
 
 >
 >
->```
->*$ rabin2 -I ./RedVelvet*
+>```haxe
+>$ rabin2 -I ./RedVelvet
 >arch     x86
 >baddr    0x400000
 >binsz    11797
@@ -200,14 +200,14 @@ Radare2를 이용한 리버스 엔지니어링을 Araboza
 
 >
 >
->```
->*$ rax2 0xf*
+>```haxe
+>$ rax2 0xf
 >15
->*$ rax2 15*
+>$ rax2 15
 >0xf
->*$ rax2 b15*
+>$ rax2 b15
 >1111b
->*$ rax2 1111b*
+>$ rax2 1111b
 >0xf
 >```
 >
@@ -226,12 +226,12 @@ Radare2를 이용한 리버스 엔지니어링을 Araboza
 
 >
 >
->```
->*$ cat ./1.txt*
+>```haxe
+>$ cat ./1.txt
 >123
->*$ cat ./2.txt*
+>$ cat ./2.txt
 >321
->*$ radiff2 ./1.txt ./2.txt*
+>$ radiff2 ./1.txt ./2.txt
 >0x00000000 31 => 33 0x00000000
 >0x00000002 33 => 31 0x00000002
 >```
@@ -254,70 +254,70 @@ https://radareorg.github.io/blog/posts/binary-diffing/
 
 >
 >
->```
->`*$ rafind2 Kingmaker*`
->`0x00405cc0  | |/ (_)_ *   * _|  \\/  | * _| | **_ _ *
+>```haxe
+>$ rafind2 Kingmaker
+>0x00405cc0  | |/ (_)_ *   * _|  \\/  | * _| | **_ _ *
 >0x00405cf8  | ' /| | '_ \\ / _| |\\/| |/ _ | |/ / _ \\ '*|
 >0x00405d30  | . \\| | | | | (_| | |  | | (_| |   <  */ |
->0x00405d68  |_|\\_\\_|_| |_|\\*, |_|  |_|\\*,_|_|\\_\\*_|_|`
->`0x00405da0                |*_/                            \n`
->`0x00405dd8 Once upon a time, there was a kingdom with 7 princes.`
->`0x00405e10 One day the king thinks to decide the who will be the next king.`
->`0x00405e58 So he made 5 tests for the princes.`
->`0x00405e80 If you pass all the tests, you can be a king!\n`
->`0x00405eb0 **********************KING MAKER START**********************\n`
->`0x00405eee .......`
->`0x00405ef6 Who am I...??`
->`0x00405f04 1> Ask to someone`
->`0x00405f16 2> Look around`
->`0x00406158 \e\f\a\b`
->`0x00406188 \e\f\a\b`
->`0x004061af ;*3$"`
->`0x00406211 V\f\a\b`
->`0x004062b1 Y\f\a\b`
->`0x004062f1 Y\f\a\b`
->`0x00406312 I\f\a\b`
->`0x00406331 Y\f\a\b`
->`0x00406479 Y\f\a\b`
->`0x004064b9 Y\f\a\b`
->`0x004066f9 Y\f\a\b`
->`0x0040673a I\f\a\b`
->`0x00406759 y\f\a\b`
->`0x004067b9 Y\f\a\b`
->`0x00406879 Y\f\a\b`
->`0x00406899 l\f\a\b`
->`0x004068d9 Y\f\a\b`
->`0x00406939 j\f\a\b`
->`0x00406959 V\f\a\b`
->`0x006070d0 Dæúæ`
->`0x006070e4 DDN>ÍƍÃðú`
->`0x00000000 GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.10) 5.4.0 20160609`
->`0x00000001 .shstrtab`
->`0x0000000b .interp`
->`0x00000013 .note.ABI-tag`
->`0x00000021 .note.gnu.build-id`
->`0x00000034 .gnu.hash`
->`0x0000003e .dynsym`
->`0x00000046 .dynstr`
->`0x0000004e .gnu.version`
->`0x0000005b .gnu.version_r`
->`0x0000006a .rela.dyn`
->`0x00000074 .rela.plt`
->`0x0000007e .init`
->`0x00000084 .plt.got`
->`0x0000008d .text`
->`0x00000093 .fini`
->`0x00000099 .rodata`
->`0x000000a1 .eh_frame_hdr`
->`0x000000af .eh_frame`
->`0x000000b9 .init_array`
->`0x000000c5 .fini_array`
->`0x000000d1 .jcr`
->`0x000000d6 .dynamic`
->`0x000000df .got.plt`
->`0x000000e8 .data`
->`0x000000ee .bss`
->`0x000000f3 .comment
+>0x00405d68  |_|\\_\\_|_| |_|\\*, |_|  |_|\\*,_|_|\\_\\*_|_|
+>0x00405da0                |*_/                            \n
+>0x00405dd8 Once upon a time, there was a kingdom with 7 princes.
+>0x00405e10 One day the king thinks to decide the who will be the next king.
+>0x00405e58 So he made 5 tests for the princes.
+>0x00405e80 If you pass all the tests, you can be a king!\n
+>0x00405eb0 **********************KING MAKER START**********************\n
+>0x00405eee .......
+>0x00405ef6 Who am I...??
+>0x00405f04 1> Ask to someone
+>0x00405f16 2> Look around
+>0x00406158 \e\f\a\b
+>0x00406188 \e\f\a\b
+>0x004061af ;*3$"
+>0x00406211 V\f\a\b
+>0x004062b1 Y\f\a\b
+>0x004062f1 Y\f\a\b
+>0x00406312 I\f\a\b
+>0x00406331 Y\f\a\b
+>0x00406479 Y\f\a\b
+>0x004064b9 Y\f\a\b
+>0x004066f9 Y\f\a\b
+>0x0040673a I\f\a\b
+>0x00406759 y\f\a\b
+>0x004067b9 Y\f\a\b
+>0x00406879 Y\f\a\b
+>0x00406899 l\f\a\b
+>0x004068d9 Y\f\a\b
+>0x00406939 j\f\a\b
+>0x00406959 V\f\a\b
+>0x006070d0 Dæúæ
+>0x006070e4 DDN>ÍƍÃðú
+>0x00000000 GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.10) 5.4.0 20160609
+>0x00000001 .shstrtab
+>0x0000000b .interp
+>0x00000013 .note.ABI-tag
+>0x00000021 .note.gnu.build-id
+>0x00000034 .gnu.hash
+>0x0000003e .dynsym
+>0x00000046 .dynstr
+>0x0000004e .gnu.version
+>0x0000005b .gnu.version_r
+>0x0000006a .rela.dyn
+>0x00000074 .rela.plt
+>0x0000007e .init
+>0x00000084 .plt.got
+>0x0000008d .text
+>0x00000093 .fini
+>0x00000099 .rodata
+>0x000000a1 .eh_frame_hdr
+>0x000000af .eh_frame
+>0x000000b9 .init_array
+>0x000000c5 .fini_array
+>0x000000d1 .jcr
+>0x000000d6 .dynamic
+>0x000000df .got.plt
+>0x000000e8 .data
+>0x000000ee .bss
+>0x000000f3 .comment
 >```
 >
 >
@@ -326,8 +326,8 @@ https://radareorg.github.io/blog/posts/binary-diffing/
 
 >
 >
->```
->*$ rafind2 ./RedVelvet | grep "func"*
+>```haxe
+>$ rafind2 ./RedVelvet | grep "func"
 >0x00000131 func8
 >0x00000137 func10
 >0x00000185 func14
@@ -358,7 +358,7 @@ r2용 find 툴~
 - usage *rahash2 file*이며 아래 rahash2툴로 할 수 있는 hash 목록
 
 
-> *Available Hashes*: 
+> **Available Hashes**
 > md5
 > sha1
 > sha256
@@ -389,7 +389,7 @@ r2용 find 툴~
 - 또한 인코딩, 디코딩 까지 ~
 
 
-> *Available Encoders/Decoders*: 
+> **Available Encoders/Decoders**
 > base64
 > base91
 > punycode
@@ -397,7 +397,7 @@ r2용 find 툴~
 - 그리고 암호화 알고리즘 까지 지원!
 
 
-> *Available Crypto Algos*: 
+> **Available Crypto Algos**
 > rc2
 > rc4
 > rc6
@@ -415,8 +415,8 @@ r2용 find 툴~
 - 기본으로는 아래와 같이 sha256으로 설정
 
 
-> ```
-> *$ rahash2 ./KingMaker*
+> ```haxe
+> $ rahash2 ./KingMaker
 > ./KingMaker: 0x00000000-0x000079af 
 > sha256: 44d00c9ae24574b8d8e1f94e58c84913f5bd5356ba36a5d1ed65b174d9556150
 > ```
@@ -434,12 +434,12 @@ r2용 find 툴~
 
 >
 >
->```
->*$ rasm2 -d 90*
+>```haxe
+>$ rasm2 -d 90
 >nop
->*$ rasm2 -a x86 -b 32 'mov eax, 33'*
+>$ rasm2 -a x86 -b 32 'mov eax, 33'
 >b821000000
->*$ rasm2 "nop"*
+>$ rasm2 "nop"
 >90
 >```
 >
@@ -469,17 +469,17 @@ opcode나 어셈블리 명령어를 넣어도 바로 변환해주는 툴
 
 >
 >
->```
->*$ r2 -d RedVelvet*
+>```haxe
+>$ r2 -d RedVelvet
 >Process with PID 18907 started...
 >= attach 18907 18907
 >bin.baddr 0x00400000
 >Using 0x400000
 >asm.bits 64
 >-- There is no F5 key in radare2 yet
->*[0x7f4d3d400c30]> aa*
+>[0x7f4d3d400c30]> aa
 >[x] Analyze all flags starting with sym. and entry0 (aa)
->*[0x7f4d3d400c30]> aaa*
+>[0x7f4d3d400c30]> aaa
 >[x] Analyze all flags starting with sym. and entry0 (aa)
 >[x] Analyze function calls (aac)
 >[x] Analyze len bytes of instructions for references (aar)
@@ -489,7 +489,7 @@ opcode나 어셈블리 명령어를 넣어도 바로 변환해주는 툴
 >[x] Type matching analysis for all functions (aaft)
 >[x] Propagate noreturn information
 >[x] Use -AA or aaaa to perform additional experimental analysis.
->*[0x7f4d3d400c30]>
+>[0x7f4d3d400c30]>
 >```
 >
 >
@@ -500,8 +500,8 @@ aaaa도 존재하지만 시간이 쫌 걸리고 aaa에서 잡히지 않는 이�
 
 >
 >
->```
->*>[0x7f0da9e00c30]> afl*
+>```haxe
+>[0x7f0da9e00c30]> afl
 >0x00400890    1 41           entry0
 >0x004007e0    1 6            sym.imp.*libc_start_main
 >0x004008c0    4 50   -> 41   sym.deregister_tm_clones
@@ -539,7 +539,7 @@ aaaa도 존재하지만 시간이 쫌 걸리고 aaa에서 잡히지 않는 이�
 >0x00400fb9   12 178          sym.func13
 >0x0040106b   10 138          sym.func14
 >
->*0x004010f5   11 180          sym.func15*
+>0x004010f5   11 180          sym.func15
 >0x004011a9   14 1440 -> 1176 main
 >```
 >
@@ -551,7 +551,7 @@ aaaa도 존재하지만 시간이 쫌 걸리고 aaa에서 잡히지 않는 이�
 
 >
 >
->```
+>```haxe
 >*[0x7f0da9e00c30]> afn fun1 0x004010f5*
 >*[0x7f0da9e00c30]> afl*
 >0x00400890    1 41           entry0
@@ -591,7 +591,7 @@ aaaa도 존재하지만 시간이 쫌 걸리고 aaa에서 잡히지 않는 이�
 >0x00400fb9   12 178          sym.func13
 >0x0040106b   10 138          sym.func14
 >
->*0x004010f5   11 180          fun1*
+>0x004010f5   11 180          fun1
 >0x004011a9   14 1440 -> 1176 main
 >```
 >
@@ -601,8 +601,8 @@ aaaa도 존재하지만 시간이 쫌 걸리고 aaa에서 잡히지 않는 이�
 위와 같이  0x004010f5 함수 sys.func15가 fun1으로 바뀌는 모습을 볼 수 있습니다.
 또한 *~*를 사용하여 *afl~something*으로 마치 grep을 사용하는 형태로 이용할 수 있습니다.
 
-> ```
-> *[0x7f0da9e00c30]> afl~sym*
+> ```haxe
+> [0x7f0da9e00c30]> afl~sym
 > 0x004007e0    1 6            sym.imp.*libc_start_main
 > 0x004008c0    4 50   -> 41   sym.deregister_tm_clones
 > 0x00400900    4 58   -> 55   sym.register_tm_clones
@@ -650,10 +650,10 @@ r2에서 어셈블리를 출력하는 방법은 총 3가지가 있습니다.
 
 첫번째 케이스, afl로 얻은 정보로 아래와 같이 s로 주소 이동
 
-> ```
+> ```haxe
 > 0x004011a9   14 1440 -> 1176 main
-> *[0x7f482a400c30]> s main*
-> *[0x004011a9]>
+> [0x7f482a400c30]> s main
+> [0x004011a9]>
 > ```
 >
 > 
@@ -671,8 +671,8 @@ r2에서 어셈블리를 출력하는 방법은 총 3가지가 있습니다.
 
 >
 >
->```
->*[0x7f19dda00c30]> px 0x15 @0x4016e2*
+>```haxe
+>[0x7f19dda00c30]> px 0x15 @0x4016e2
 >
 >- offset -   0 1  2 3  4 5  6 7  8 9  A B  C D  E F  0123456789ABCDEF
 > 0x004016e2  666c 6167 203a 207b 2220 2573 2022 7d0a  flag : {" %s "}.
@@ -693,8 +693,8 @@ r2에서 어셈블리를 출력하는 방법은 총 3가지가 있습니다.
 - *fs* 명령어를 통해서 프로그램이 인식한 *flagspaces*를 출력해주고 
   *fs strings; f* 를 사용하여 문자열 플래그 값을 전부 출력한다.
 
-> ```
-> *[0x7f19dda00c30]> fs*
+> ```haxe
+> [0x7f19dda00c30]> fs
 > 7 * classes
 > 0 * functions
 > 17 * imports
@@ -705,7 +705,7 @@ r2에서 어셈블리를 출력하는 방법은 총 3가지가 있습니다.
 > 4 * strings
 > 50 * symbols
 > 27 * symbols.sections
-> *[0x7f19dda00c30]> fs strings; ffs strings; f*
+> [0x7f19dda00c30]> fs strings; ffs strings; f
 > 0x004016c4 12 str.HAPPINESS:
 > 0x004016d0 13 str.Your_flag_:
 > 0x004016dd 5 str.02x
@@ -717,8 +717,8 @@ r2에서 어셈블리를 출력하는 방법은 총 3가지가 있습니다.
 - 또한 *axt @@ str.** 통해서 모든 문자열의 참조되어 있는 명령어를 출력해준다.
 
 
-> ```
-> *[0x7f19dda00c30]> axt @@ str.**
+> ```haxe
+> [0x7f19dda00c30]> axt @@ str.*
 > sym.func1 0x4009e1 [DATA] mov edi, str.HAPPINESS:
 > sym.func2 0x400a30 [DATA] mov edi, str.HAPPINESS:
 > sym.func3 0x400a93 [DATA] mov edi, str.HAPPINESS:
@@ -744,8 +744,8 @@ r2에서 어셈블리를 출력하는 방법은 총 3가지가 있습니다.
 어디서 함수에서 호출되는지  어떤 어셈블리어인지 전부 출력된다.
 그리고 *izzq~string* 이라는 명령어를 통해 특정 스트링을 검색또한 가능하다.
 
-> ```
-> *[0x7f19dda00c30]> izzq~flag*
+> ```haxe
+> [0x7f19dda00c30]> izzq~flag
 > 0x4016d0 13 12 Your flag :
 > 0x4016e2 17 16 flag : {" %s "}\n
 > ```
@@ -763,30 +763,28 @@ r2에서 어셈블리를 출력하는 방법은 총 3가지가 있습니다.
 - *wx* 명령어로 통해서 *hex 데이터*로 데이터를 변경할 수 있고 변경할 위치에 꼭 *s*로 이동해야한다.
 
 
-> - ```
->   *[0x7f19dda00c30]> px 0x10*
->   
+> - ```haxe
+>   [0x7f19dda00c30]> px 0x10
 >   - offset -       0 1  2 3  4 5  6 7  8 9  A B  C D  E F  0123456789ABCDEF
->     0x7f19dda00c30  4889 e7e8 780d 0000 4989 c48b 0537 5022  H...x...I....7P"
->     *[0x7f19dda00c30]> wx 90*
->     *[0x7f19dda00c30]> px 0x10*
+>   0x7f19dda00c30  4889 e7e8 780d 0000 4989 c48b 0537 5022  H...x...I....7P"[0x7f19dda00c30]> wx 90
+>   [0x7f19dda00c30]> px 0x10
 >   - offset -       0 1  2 3  4 5  6 7  8 9  A B  C D  E F  0123456789ABCDEF
->     0x7f19dda00c30  9089 e7e8 780d 0000 4989 c48b 0537 5022  ....x...I....7P"
+>   0x7f19dda00c30  9089 e7e8 780d 0000 4989 c48b 0537 5022  ....x...I....7P"
 >   ```
->
+> 
 
 - 또한 *wa* 를 사용한  *opcode  string 데이터*로 패치를 할 수 있다.
 
 
-> - ```
->   *0x004015f0      752f           jne 0x401621*
->   *[0x004015f0]> px*
+> - ```haxe
+>   0x004015f0      752f           jne 0x401621
+>   [0x004015f0]> px
 >   
 >   - offset -   0 1  2 3  4 5  6 7  8 9  A B  C D  E F  0123456789ABCDEF
 >     0x004015f0  752f 488b 8588 feff ff48 89c6 bfe2 1640  u/H......H.....@
->     *[0x004015f0]> wa je 0x401621*
+>     [0x004015f0]> wa je 0x401621
 >     Written 2 byte(s) (je 0x401621) = wx 742f
->     *[0x004015f0]> px*
+>     [0x004015f0]> px
 >   - offset -   0 1  2 3  4 5  6 7  8 9  A B  C D  E F  0123456789ABCDEF
 >     0x004015f0  742f 488b 8588 feff ff48 89c6 bfe2 1640  t/H......H.....@
 >   ```
@@ -804,11 +802,11 @@ r2에서 어셈블리를 출력하는 방법은 총 3가지가 있습니다.
 - *dc*를 통해서  시작 시키고 *db 주소 지칭(심볼릭)* breakpoint를 설정하며 -키워드를 사용하여 *db -주소(심볼릭)* 으로 해체 할 수 있다. 
 
 
-> ```
-> *[0x7f4a23600c30]> db main*
-> *[0x7f4a23600c30]> dc*
+> ```haxe
+> [0x7f4a23600c30]> db main
+> [0x7f4a23600c30]> dc
 > hit breakpoint at: 4011a9
-> *[0x004011a9]> afl~main*
+> [0x004011a9]> afl~main
 > 0x004007e0    1 6            sym.imp.*libc_start_main
 > 0x004011a9   14 1440 -> 1176 main
 > ```
@@ -817,8 +815,8 @@ r2에서 어셈블리를 출력하는 방법은 총 3가지가 있습니다.
 
 또한 *dr* 통해서 현재 레지스터 상태를 출력한다.
 
-> ```
-> *[0x004011a9]> dr*
+> ```haxe
+> [0x004011a9]> dr
 > rax = 0x004011a9
 > rbx = 0x00000000
 > rcx = 0x00000000
@@ -844,8 +842,8 @@ r2에서 어셈블리를 출력하는 방법은 총 3가지가 있습니다.
 
 그리고 *afvd* 명령어를 통해서 현재 생성된 변수와 값을 여러 형태로 출력해준다.
 
-> ```
-> *[0x004011a9]> afvd*
+> ```haxe
+> [0x004011a9]> afvd
 > var var_8h = 0x00401638 = (qword)0x00401f0f00000000
 > var var_70h = 0x004015d0 = (qword)0xb47e1ffffffe48bd
 > var var_68h = 0x004015d8 = (qword)0x40858d4890558d48
@@ -920,23 +918,23 @@ r2에서 어셈블리를 출력하는 방법은 총 3가지가 있습니다.
 - 그리고 마지막으로 아래와 같이 떴을때 *oob* 명령어를 통해서 프로그램을 다시 재설정해야지 디버깅할 수 있기 때문에 *oob arg1 arg2*_ 이런식의 입력이다.(올리디버거 ctrl + f2 랑 비슷한 맥락)
 
 
-> ```
-> > *[0x7f2e08400c30]> dc*
-> > Your flag :
-> > *[0x7f2e07cac748]> dc*
+> ```haxe
+> [0x7f2e08400c30]> dc
+> Your flag :
+> [0x7f2e07cac748]> dc
 > > child exited with status 1
 > 
 > > ==> Process finished
 > 
-> > *[0x7f2e07cac748]> oob*
-> > Process with PID 18954 started...
-> > = attach 18954 18954
-> > File dbg://./RedVelvet reopened in read-write mode
-> > Unable to find filedescriptor 5
-> > Unable to find filedescriptor 5
-> > 18954
-> > *[0x7fd1e3800c30]> dc*
-> > Your flag :
+> [0x7f2e07cac748]> oob
+> Process with PID 18954 started...
+> = attach 18954 18954
+> File dbg://./RedVelvet reopened in read-write mode
+> Unable to find filedescriptor 5
+> Unable to find filedescriptor 5
+> 18954
+> [0x7fd1e3800c30]> dc
+> Your flag :
 > ```
 >
 > 
