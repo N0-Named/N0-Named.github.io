@@ -1,20 +1,27 @@
 
-<p>Radare2를 이용한 리버스 엔지니어링</p>
+<h1>Radare2를 이용한 리버스 엔지니어링</h1>
+<p>Radare2를 사용하여 리버스 엔지니어링 해보자.</p>
 <p>&nbsp;</p>
 <h1>간단한 소개</h1>
 <hr />
-<blockquote><p><strong>Radare2</strong>는 리버스 엔지니어링 툴(프레임워크)로 gdb와 같이 <strong>동적분석</strong>을 할 수 있다.  또한 우리에겐 매우 편리한 인터랙티브 쉘로 구성되어 있어서 리눅스에서 평소 사용하던 명령어들을 그대로 이용할 수 있다.  그리고 여러 강력한 기능을 제공하고 전부는 아니지만 최대한 많이 담아 볼 예정이다.</p>
+<blockquote><p><strong>Radare2는</strong> 리버스 엔지니어링 툴(프레임워크)로 gdb와 같이 <strong>동적분석을</strong> 할 수 있다.  또한 우리에겐 매우 편리한 인터랙티브 쉘로 구성되어 있어서 리눅스에서 평소 사용하던 명령어들을 그대로 이용할 수 있다.  그리고 여러 강력한 기능을 제공하고 전부는 아니지만 최대한 많이 담아 볼 예정이다.</p>
 </blockquote>
 <p>&nbsp;</p>
 <hr />
 <h1>설치</h1>
 <hr />
-<pre><code>1. $  git clone https://github.com/radare/radare2.git
+<pre><code class='language-shell' lang='shell'>1. $  git clone https://github.com/radare/radare2.git
 2. $  cd radare2/sys/
 3. $  ./install.sh
 </code></pre>
-<h4>이상 설치가 완료되었으면 간단하게 Radare2에 있는 툴 11가지중 분석에 용이한 7가지를 간단한 예제와 함게 설명 후 ctf 문제를 분석을 진행할 것이다.</h4>
-<p>(예제 파일은 18~19년도 코게 문제)</p>
+<p>&nbsp;</p>
+<ul>
+<li><h4>이상 설치가 완료되었으면 간단하게 Radare2에 있는 툴 11가지중 분석에 용이한 7가지를 간단한 예제와 함게 설명 후 ctf 문제를 분석을 진행할 것이다.</h4>
+</li>
+<li><p>(예제 파일은 18~19년도 코게 문제)</p>
+</li>
+
+</ul>
 <hr />
 <h1>목차</h1>
 <h3>1. instruction</h3>
@@ -28,34 +35,57 @@
 <p>&nbsp;</p>
 <hr> 
 <h1>instructon</h1>
-<ol>
-<li><h4>분석을 위한 간단한 명령어들</h4>
-</li>
+<h4>1. 분석을 위한 간단한 명령어들</h4>
+<ul>
+<li>우선 <strong>r2 filename</strong>으로 radare2를 작동시켜준다. 이번 문서에서는 예시로 IORI의 Crackme문제를 이용하겠다. 여기서 실행을 할 때, 여러가지 옵션이 사용가능한데 -d옵션을 달아줄 경우, 디버깅 모드로 접속이 가능하다. 또한 -w 옵션으로 접속할 경우 바이너리를 수정하는것이 가능해진다. 상황에 맞게 옵션을 이용하자.</li>
 
-</ol>
-<p>우선 <strong>r2 filename</strong>으로 radare2를 작동시켜준다. 이번 문서에서는 예시로 IORI의 Crackme문제를 이용하겠다. 여기서 실행을 할 때, 여러가지 옵션이 사용가능한데 -d옵션을 달아줄 경우, 디버깅 모드로 접속이 가능하다. 또한 -w 옵션으로 접속할 경우 바이너리를 수정하는것이 가능해진다. 상황에 맞게 옵션을 이용하자.</p>
+</ul>
 <p><img src="N0-Named.github.io/_posts/스크린샷 2019-12-04 오후 10.09.23.png" referrerpolicy="no-referrer" alt="r2 filename"></p>
-<p>본격적으로 분석을 하기에 앞서 <strong>rabin2 -I filename</strong> 명령어를 이용하여 해당 바이너리의 세부정보를 확인할 수 있다. 밑의 사진을 보면 canary, nx, relro 등 의 보호기법 여부와 프로그래밍 언어, os 도 확인을 할 수 있다. 문제풀이에 앞서 탐색전을 하기에 유용하다.</p>
+<ul>
+<li>	본격적으로 분석을 하기에 앞서 <strong>rabin2 -I filename</strong> 명령어를 이용하여 해당 바이너리의 세부정보를 확인할 수 있다. 밑의 사진을 보면 canary, nx, relro 등 의 보호기법 여부와 프로그래밍 언어, os 도 확인을 할 수 있다. 문제풀이에 앞서 탐색전을 하기에 유용하다.</li>
+
+</ul>
 <p><img src="N0-Named.github.io/_posts/스크린샷 2019-12-04 오후 7.43.24.png" referrerpolicy="no-referrer" alt="스크린샷 2019-12-04 오후 7.43.24"></p>
-<p>그 후 <strong>aa</strong>를 이용하여 본격적인 분석을 시작할 수 있다. aa는 Analyze All 의 약자로, 바이너리 전체를 돌아서 symbol 영역 등을 분석해주는 명령어이다. 이외에 <strong>aaa</strong>를 입력하면 <strong>aa</strong>를 포함한 <strong>aar, aac</strong> 등의 다양한 명령어들을 실행시켜준다. </p>
+<ul>
+<li>그 후 <strong>aa</strong>를 이용하여 본격적인 분석을 시작할 수 있다. aa는 Analyze All 의 약자로, 바이너리 전체를 돌아서 symbol 영역 등을 분석해주는 명령어이다. 이외에 <strong>aaa</strong>를 입력하면 <strong>aa</strong>를 포함한 <strong>aar, aac</strong> 등의 다양한 명령어들을 실행시켜준다. </li>
+
+</ul>
 <p><img src="N0-Named.github.io/_posts/스크린샷 2019-12-04 오후 3.49.08.png" referrerpolicy="no-referrer" alt="스크린샷 2019-12-04 오후 3.49.08"></p>
-<p><strong>afl</strong>명령어를 사용하면 해당 바이너리 내의 함수 목록을 표현해준다. 밑의 이미지에서 함수의 이름이 임의로  sym.~~~로 표현되는데 이를 더 직관적으로 확인할 수 있도록 <strong>afn |name| |addr|</strong> 로 함수의 이름을 변경할 수 있다.</p>
+<ul>
+<li><strong>afl</strong>명령어를 사용하면 해당 바이너리 내의 함수 목록을 표현해준다. 밑의 이미지에서 함수의 이름이 임의로  sym.~~~로 표현되는데 이를 더 직관적으로 확인할 수 있도록 <strong>afn |name| |addr|</strong> 로 함수의 이름을 변경할 수 있다.</li>
+
+</ul>
 <p><img src="N0-Named.github.io/_posts/스크린샷 2019-12-04 오후 7.53.12.png" referrerpolicy="no-referrer" alt="스크린샷 2019-12-04 오후 7.53.12"></p>
-<p>Radare2는 <strong>pdf</strong>(Print Disassemble Funtion) 명령어를 제공하므로, 해당 함수의 디스어셈블리를 보고싶다면 <strong>pdf @funcname</strong>을 입력하면 된다. 여기서 @는 명령이 실행되는 탐색 위치를 지정하는데 사용된다. 또한, <strong>pd</strong>라는 명령어를 사용하면 함수가 아닌 개체를 디스어셈블 해준다. 
-<img src="N0-Named.github.io/_posts/스크린샷 2019-12-04 오후 3.49.14.png" referrerpolicy="no-referrer" alt="스크린샷 2019-12-04 오후 3.49.14"></p>
-<p>다음으로 설명할 명령어는 IDA처럼 그래프 형식으로 바이너리를 보여주는 <strong>VV</strong>명령어이다. 현재 분석중인것은 파란색으로 표시되고, 다음 노드로 넘어가기 위해서는 <strong>Tab</strong>을 누르면된다.  [<strong>g</strong>]나 방향키로 분석을 하다가 현재의 노드로 돌아갈때 에는<strong>.</strong>을 누르면 된다.  </p>
-<p><strong>P</strong>키를 누르면 그래프의 형태가 변화하고, <strong>x</strong>를 누르면 현재 분석중인 노드의 위치를 알려준다. 그 후 <strong>q</strong>를 누르면 빠져나올 수 있다.</p>
+<ul>
+<li>Radare2는 <strong>pdf</strong>(Print Disassemble Funtion) 명령어를 제공하므로, 해당 함수의 디스어셈블리를 보고싶다면 <strong>pdf @funcname</strong>을 입력하면 된다. 여기서 @는 명령이 실행되는 탐색 위치를 지정하는데 사용된다. 또한, <strong>pd</strong>라는 명령어를 사용하면 함수가 아닌 개체를 디스어셈블 해준다. 
+<img src="N0-Named.github.io/_posts/스크린샷 2019-12-04 오후 3.49.14.png" referrerpolicy="no-referrer" alt="스크린샷 2019-12-04 오후 3.49.14"></li>
+
+</ul>
+<ul>
+<li>다음으로 설명할 명령어는 IDA처럼 그래프 형식으로 바이너리를 보여주는 <strong>VV</strong>명령어이다. 현재 분석중인것은 파란색으로 표시되고, 다음 노드로 넘어가기 위해서는 <strong>Tab</strong>을 누르면된다.  [<strong>g</strong>]나 방향키로 분석을 하다가 현재의 노드로 돌아갈때 에는<strong>.</strong>을 누르면 된다.  </li>
+<li><strong>P</strong>키를 누르면 그래프의 형태가 변화하고, <strong>x</strong>를 누르면 현재 분석중인 노드의 위치를 알려준다. 그 후 <strong>q</strong>를 누르면 빠져나올 수 있다.</li>
+
+</ul>
 <p><img src="N0-Named.github.io/_posts/스크린샷 2019-12-04 오후 8.02.23.png" referrerpolicy="no-referrer" alt="스크린샷 2019-12-04 오후 8.02.23"></p>
-<p>hex값을 확인할때는 &quot;<strong>x 표시할 라인수</strong>&quot;를 입력해주면 해당 라인만큼의 hex값을 출력해준다. </p>
+<ul>
+<li>hex값을 확인할때는 &quot;<strong>x 표시할 라인수</strong>&quot;를 입력해주면 해당 라인만큼의 hex값을 출력해준다. </li>
+
+</ul>
 <p><img src="N0-Named.github.io/_posts/스크린샷 2019-12-04 오후 3.50.20.png" referrerpolicy="no-referrer" alt="스크린샷 2019-12-04 오후 3.50.20"></p>
-<p>해당 바이너리를 더 깊게 분석하고 싶다면 seek명령어인 <strong>s</strong>를 입력후 옵션을 추가하여 이용하면 된다. s는 현재의 탐색 위치를 지정하는데 유용하게 사용할 수 있다. 밑의 이미지를 확인하면 원래는 현재의 탐색 주소가 0x08048430 이였는데 s main을 입력후 main함수의 주소인 0x080484e4로 변경되는것을 알 수 있다. 이는 afn명령어로 수정한 이름과 혼합하여 사용하면 분석을 할 때 더욱 편리하게 이용이 가능하다.</p>
+<ul>
+<li>해당 바이너리를 더 깊게 분석하고 싶다면 seek명령어인 <strong>s</strong>를 입력후 옵션을 추가하여 이용하면 된다. s는 현재의 탐색 위치를 지정하는데 유용하게 사용할 수 있다. 밑의 이미지를 확인하면 원래는 현재의 탐색 주소가 0x08048430 이였는데 s main을 입력후 main함수의 주소인 0x080484e4로 변경되는것을 알 수 있다. 이는 afn명령어로 수정한 이름과 혼합하여 사용하면 분석을 할 때 더욱 편리하게 이용이 가능하다.</li>
+
+</ul>
 <p><img src="N0-Named.github.io/_posts/스크린샷 2019-12-04 오후 8.00.17.png" referrerpolicy="no-referrer" alt="스크린샷 2019-12-04 오후 8.00.17"></p>
 <ol>
 <li><h4>문자열 관련 명령어들</h4>
 </li>
 
 </ol>
-<p><strong>axt</strong>명령어는 해당 함수의 참조위치를 확인할 수 있는 명령어이다. <strong>afl</strong>명령어를 이용하여 함수의 목록을 확인 후, 이를 이용하여 참조를 확인할 수 있다.</p>
+<ul>
+<li><strong>axt</strong>명령어는 해당 함수의 참조위치를 확인할 수 있는 명령어이다. <strong>afl</strong>명령어를 이용하여 함수의 목록을 확인 후, 이를 이용하여 참조를 확인할 수 있다.</li>
+
+</ul>
 <p><img src="N0-Named.github.io/_posts/스크린샷 2019-12-04 오후 8.08.10.png" referrerpolicy="no-referrer" alt="스크린샷 2019-12-04 오후 8.08.10"></p>
 <p><strong>izzq~[text]</strong>는 해당 텍스트의 위치를 바이너리 내에서 검색하는 명령어이다. 이 문제에서는 Password인증을 우회해야 하기 때문에 Password를 찾아봤다. </p>
 <p><img src="N0-Named.github.io/_posts/스크린샷 2019-12-04 오후 8.09.45.png" referrerpolicy="no-referrer" alt="스크린샷 2019-12-04 오후 8.09.45"></p>
@@ -66,19 +96,25 @@
 </li>
 
 </ol>
-<p>이번에는 r2 -w옵션을 이용하여 바이너리 수정 모드에서 이용되는 명령어들을 알아보자. 보통 이렇게 바이너리를 직접 수정하는 경우에는 원본파일을 복사해서 복사본으로 진행하는것이 좋다. 그럼 시작해보자 </p>
-<p>우선 처음으로 해야할 것은, 위에서 설명한 s명령어를 이용하여 현재의 탐색주소를 선정해야한다.  그 후, <strong>wx</strong> 명령어를 이용하면 현재 탐색 위치의 값을 변경하고자 하는 hex 값으로 수정할 수 있다.  또한 <strong>wa</strong> 명령어는 현재 탐색 위치의 값을 입력한 opcode로 수정할 수 있다. </p>
+<ul>
+<li>이번에는 r2 -w옵션을 이용하여 바이너리 수정 모드에서 이용되는 명령어들을 알아보자. 보통 이렇게 바이너리를 직접 수정하는 경우에는 원본파일을 복사해서 복사본으로 진행하는것이 좋다. 그럼 시작해보자 </li>
+<li>우선 처음으로 해야할 것은, 위에서 설명한 s명령어를 이용하여 현재의 탐색주소를 선정해야한다.  그 후, <strong>wx</strong> 명령어를 이용하면 현재 탐색 위치의 값을 변경하고자 하는 hex 값으로 수정할 수 있다.  또한 <strong>wa</strong> 명령어는 현재 탐색 위치의 값을 입력한 opcode로 수정할 수 있다. </li>
+
+</ul>
 <ol>
 <li><h4>디버깅을 위한 명령어들</h4>
 </li>
 
 </ol>
 <p>이번에는 r2 -d옵션을 이용하여 디버그 모드에서 이용되는 명령어들을 알아보자. </p>
-<p><strong>dc</strong>명령어를 입력하면 실행을 하게되며, 첫 실행이나 break point에 걸렸을때 계속 실행하는 명령어이다.</p>
-<p><strong>db 주소</strong>명령어를 이용하면 break point를 설정할 수 있다. 또한 <strong>db- 주소</strong>하면 해당 break point를 제거할 수 있고 <strong>db-</strong> 의경우 모든  break point를 제거한다.</p>
-<p><strong>dr</strong> 명령어는 디버그 레지스터의 상태를 보여준다. </p>
-<p><strong>afvd</strong> 명령어는 디버깅 진행중 해당 변수들의 상태를 보여준다.</p>
-<p>이후에 <strong>dc</strong> 를 입력하면 디버깅이 종료되게 된다. </p>
+<ol>
+<li><strong>dc</strong>명령어를 입력하면 실행을 하게되며, 첫 실행이나 break point에 걸렸을때 계속 실행하는 명령어이다.</li>
+<li><strong>db 주소</strong>명령어를 이용하면 break point를 설정할 수 있다. 또한 <strong>db- 주소</strong>하면 해당 break point를 제거할 수 있고 <strong>db-</strong> 의경우 모든  break point를 제거한다.</li>
+<li><strong>dr</strong> 명령어는 디버그 레지스터의 상태를 보여준다. </li>
+<li><strong>afvd</strong> 명령어는 디버깅 진행중 해당 변수들의 상태를 보여준다.</li>
+<li>이후에 <strong>dc</strong> 를 입력하면 디버깅이 종료되고 <strong>oob</strong> 명령어를 통해서 다시 디버깅을 시작한다.</li>
+
+</ol>
 <hr />
 <h1>2. rabin2</h1>
 <hr />
@@ -687,3 +723,4 @@ Unable to find filedescriptor 5
 <strong>[0x7fd1e3800c30]&gt; dc</strong>
 Your flag :</p>
 </blockquote>
+
