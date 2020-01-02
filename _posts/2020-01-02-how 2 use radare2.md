@@ -5,6 +5,8 @@ date: 2020-01-02
 tags: [reversing,pwnable,hacking,exploit,system,codegate]
 comments: false
 ---
+Radare2를 이용한 리버스 엔지니어링을 Araboza
+
 
 # Radare2를 이용한 리버스 엔지니어링
 
