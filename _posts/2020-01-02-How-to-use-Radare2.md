@@ -5,7 +5,7 @@ date: 2020-01-02
 tags: [r2,pwnable,hacking,revsersing,linux,system]
 comments: false
 ---
-<hr />
+
 <p>Radare2를 이용한 리버스 엔지니어링</p>
 <p>&nbsp;</p>
 <h2>Radare2를 사용하여 리버스 엔지니어링 해보자.</h2>
