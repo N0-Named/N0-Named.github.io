@@ -7,7 +7,7 @@ comments: false
 ---
 
 
-# Radare2를 이용한 리버스 엔지니어링
+Radare2를 이용한 리버스 엔지니어링
 
 
 
