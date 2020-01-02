@@ -1,7 +1,10 @@
-<p>layout: post
-title: &quot;How to use Radare2&quot;
-date: 2020-01-02 <br/>tags: [reversing,pwnable,hacking,exploit,system,codegate]
-comments: false</p>
+---
+layout: post
+title: "How to use Radare2"
+date: 2020-01-02    
+tags: [r2,pwnable,hacking,revsersing,linux,system]
+comments: false
+---
 <hr />
 <p>Radare2를 이용한 리버스 엔지니어링</p>
 <p>&nbsp;</p>
