@@ -944,7 +944,35 @@ r2에서 어셈블리를 출력하는 방법은 총 3가지가 있습니다.
 > ```
 >
 
+### 그 외 나머지 디버깅 명령어
 
+```haxe
+do: Reopen program
+dp: Shows debugged process, child processes and threads
+dc: Continue
+dcu <address or symbol>: Continue until symbol (sets bp in address, continua until bp and remove bp)
+dc[sfcp]: Continue until syscall(eg: write), fork, call, program address (To exit a library)
+ds: Step in
+dso: Step out
+dss: Skip instruction
+dr register=value: Change register value
+dr(=)?: Show register values
+db address: Sets a breakpoint at address
+	db sym.main add breakpoint into sym.main
+	db 0x804800 add breakpoint
+	db -0x804800 remove breakpoint
+dsi (conditional step): Eg: "dsi eax==3,ecx>0"
+dbt: Shows backtrace
+drr: Display in colors and words all the refs from registers or memory
+dm: Shows memory map (* indicates current section)
+	[0xb776c110]> dm
+	sys 0x08048000 - 0x08062000 s r-x /usr/bin/ls
+	sys 0x08062000 - 0x08064000 s rw- /usr/bin/ls
+	sys 0xb776a000 - 0xb776b000 s r-x [vdso]
+	sys 0xb776b000 * 0xb778b000 s r-x /usr/lib/ld-2.17.so
+	sys 0xb778b000 - 0xb778d000 s rw- /usr/lib/ld-2.17.so
+	sys 0xbfe5d000 - 0xbfe7e000 s rw- [stack]
+```
 
 # Reference
 
