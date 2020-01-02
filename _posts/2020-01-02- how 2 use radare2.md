@@ -1,8 +1,11 @@
-
+<p>layout: post
+title: &quot;How to use Radare2&quot;
+date: 2020-01-02 <br/>tags: [reversing,pwnable,hacking,exploit,system,codegate]
+comments: false</p>
 <hr />
 <p>Radare2를 이용한 리버스 엔지니어링</p>
 <p>&nbsp;</p>
-<p>Radare2를 사용하여 리버스 엔지니어링 해보자.</p>
+<h2>Radare2를 사용하여 리버스 엔지니어링 해보자.</h2>
 <p>&nbsp;</p>
 <h1>간단한 소개</h1>
 <p>&nbsp;</p>
