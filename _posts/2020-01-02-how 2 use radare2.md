@@ -68,8 +68,9 @@ Radare2를 이용한 리버스 엔지니어링을 Araboza
 
 - 우선 **r2 filename**으로 radare2를 작동시켜준다. 이번 문서에서는 예시로 IORI의 Crackme문제를 이용하겠다. 여기서 실행을 할 때, 여러가지 옵션이 사용가능한데 -d옵션을 달아줄 경우, 디버깅 모드로 접속이 가능하다. 또한 -w 옵션으로 접속할 경우 바이너리를 수정하는것이 가능해진다. 상황에 맞게 옵션을 이용하자.
 
-
-![스크린샷 2019-12-04 오후 3.48.51](/Users/kangjunhyek/Desktop/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202019-12-04%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%203.48.51.png)
+```
+feature: /_posts/스크린샷 2019-12-04 오후 3.48.51.png
+```
 
 - 본격적으로 분석을 하기에 앞서 **rabin2 -I filename** 명령어를 이용하여 해당 바이너리의 세부정보를 확인할 수 있다. 밑의 사진을 보면 canary, nx, relro 등 의 보호기법 여부와 프로그래밍 언어, os 도 확인을 할 수 있다. 문제풀이에 앞서 탐색전을 하기에 유용하다.
 
@@ -941,4 +942,21 @@ r2에서 어셈블리를 출력하는 방법은 총 3가지가 있습니다.
 > Your flag :
 > ```
 >
-> 
+
+
+
+# Reference
+
+https://fir3.tistory.com/22
+
+https://r2wiki.readthedocs.io/en/latest/
+
+https://teamrocketist.github.io/2017/11/27/Reverse-TUCTF-Unknown/
+
+http://ctfhacker.com/ctf/python/symbolic/execution/reverse/radare/2015/11/28/cmu-binary-bomb-flag2.html
+
+https://github.com/Brandon-Everhart/CTF-Writeups/tree/master/2018/Codegate/Reversing/RedVelvet
+
+https://insinuator.net/2016/08/reverse-engineering-with-radare2-intro/
+
+https://cpuu.postype.com/post/838572
