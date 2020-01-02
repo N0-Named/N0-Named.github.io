@@ -119,9 +119,9 @@ comments: false</p>
 <li>이후에 <strong>dc</strong> 를 입력하면 디버깅이 종료되고 <strong>oob</strong> 명령어를 통해서 다시 디버깅을 시작한다.</li>
 
 </ol>
-<hr />
+<p>&nbsp;</p>
 <h1>2. rabin2</h1>
-<hr />
+<p>&nbsp;</p>
 <p>기본 usage 예제는 <strong>rabin2 -l 파일이름</strong>으로 아래 와 같은 기능을 수행한다.</p>
 <blockquote><p><strong>$ rabin2 -I ./RedVelvet</strong>
 arch     x86
@@ -157,9 +157,9 @@ subsys   linux
 va       true</p>
 </blockquote>
 <p>각종 메모리 보호 기법과 아키텍쳐까지 굉장히 많은 정보를 한 눈에 확인 할 수 있습니다.</p>
-<hr />
+<p>&nbsp;</p>
 <h1>3. rax2</h1>
-<hr />
+<p>&nbsp;</p>
 <p>usage는 <strong>rax2 value</strong>이며 아래 예제 보다 휠 많은 옵션들이 있지만 분석 도중 간단히 사용할 수 있는 진법 변환기</p>
 <blockquote><p><strong>$ rax2 0xf</strong>
 15
@@ -171,9 +171,9 @@ va       true</p>
 0xf</p>
 </blockquote>
 <p>무려 float 형인 실수까지 변환 가능하다.(물론 강제 캐스팅?!)</p>
-<hr />
+<p>&nbsp;</p>
 <h1>4. radiff2</h1>
-<hr />
+<p>&nbsp;</p>
 <p>usage는 <strong>radiff2 file1 file2</strong></p>
 <blockquote><p><strong>$ cat ./1.txt</strong>
 123
@@ -186,9 +186,9 @@ va       true</p>
 <p>&nbsp;</p>
 <p>위같은 너무~ 간단한 비교부터 여러 옵션으로 아래 주소 같은 정밀하게 비교도 가능한 r2의 비교 툴 radiff2!!
 <a href='https://radareorg.github.io/blog/posts/binary-diffing/' target='_blank' class='url'>https://radareorg.github.io/blog/posts/binary-diffing/</a></p>
-<hr />
+<p>&nbsp;</p>
 <h1>5. rafind2</h1>
-<hr />
+<p>&nbsp;</p>
 <p>usage는 <strong>rafind2 file</strong></p>
 <blockquote><p><strong>$ rafind2 Kingmaker</strong>
 0x00405cc0  | |/ (<em>)</em> <em>_   __ _|  \/  | __ _| | <strong>_</strong> _ __
@@ -273,9 +273,9 @@ va       true</p>
 0x00000366 func4</p>
 </blockquote>
 <p>r2용 find 툴~</p>
-<hr />
+<p>&nbsp;</p>
 <h1>6. rahash2</h1>
-<hr />
+<p>&nbsp;</p>
 <p>usage <strong>rahash2 file</strong>이며 아래 rahash2툴로 할 수 있는 hash 목록</p>
 <blockquote><p><strong>Available Hashes</strong>: 
 md5
@@ -332,9 +332,9 @@ serpent-ecb</p>
 ./KingMaker: 0x00000000-0x000079af 
 sha256: 44d00c9ae24574b8d8e1f94e58c84913f5bd5356ba36a5d1ed65b174d9556150</p>
 </blockquote>
-<hr />
+<p>&nbsp;</p>
 <h1>7. rasm2</h1>
-<hr />
+<p>&nbsp;</p>
 <p>rasm2은 어셈블러 + 디어셈블러 툴 </p>
 <blockquote><p><strong>$ rasm2 -d 90</strong>
 nop
@@ -344,9 +344,9 @@ b821000000
 90</p>
 </blockquote>
 <p>opcode나 어셈블리 명령어를 넣어도 바로 변환해주는 툴</p>
-<hr />
+<p>&nbsp;</p>
 <h1>8.  r2</h1>
-<hr />
+<p>&nbsp;</p>
 <p>usage </p>
 <blockquote><p><strong>$ r2 file</strong>
 정적 모드</p>
@@ -529,9 +529,9 @@ asm.bits 64
 </ul>
 </blockquote>
 <p><strong>@</strong>를 통해서 *(참조)똑같은 의미이고 0x4016e2부터 0x15크기 만큼 출력하라는 의미이다.</p>
-<hr />
+<p>&nbsp;</p>
 <h2>String 출력 관련 명령어</h2>
-<hr />
+<p>&nbsp;</p>
 <p><strong>fs</strong> 명령어를 통해서 프로그램이 인식한 <strong>flagspaces</strong>를 출력해주고 
 <strong>fs strings; f</strong> 를 사용하여 문자열 플래그 값을 전부 출력한다.</p>
 <blockquote><p><strong>[0x7f19dda00c30]&gt; fs</strong>
@@ -578,9 +578,9 @@ main 0x4015fc [DATA] mov edi, str.flag</em>:<strong>_</strong>s</p>
 0x4016d0 13 12 Your flag :
 0x4016e2 17 16 flag : {&quot; %s &quot;}\n</p>
 </blockquote>
-<hr />
+<p>&nbsp;</p>
 <h2>바이너리 패치</h2>
-<hr />
+<p>&nbsp;</p>
 <blockquote><p>반드시 바이너리 패치는 -w 옵션으로 실행해야하고 패치된 바이너리는 바로 저장되기때문에 백업 필수</p>
 </blockquote>
 <p><strong>wx</strong> 명령어로 통해서 <strong>hex 데이터</strong>로 데이터를 변경할 수 있고 변경할 위치에 꼭 <strong>s</strong>로 이동해야한다.</p>
@@ -609,9 +609,9 @@ Written 2 byte(s) (je 0x401621) = wx 742f
 
 </ul>
 </blockquote>
-<hr />
+<p>&nbsp;</p>
 <h2>디버그 모드</h2>
-<hr />
+<p>&nbsp;</p>
 <p>반드시 -d 옵션으로 시작해야한다.</p>
 <p><strong>dc</strong>를 통해서  시작 시키고 <strong>db 주소 지칭(심볼릭)</strong> breakpoint를 설정하며 -키워드를 사용하여 <strong>db -주소(심볼릭)</strong> 으로 해체 할 수 있다. </p>
 <blockquote><p><strong>[0x7f4a23600c30]&gt; db main</strong>
