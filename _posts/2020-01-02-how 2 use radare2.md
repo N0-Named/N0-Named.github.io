@@ -72,7 +72,7 @@ Radare2를 이용한 리버스 엔지니어링을 Araboza
 - 본격적으로 분석을 하기에 앞서 **rabin2 -I filename** 명령어를 이용하여 해당 바이너리의 세부정보를 확인할 수 있다. 밑의 사진을 보면 canary, nx, relro 등 의 보호기법 여부와 프로그래밍 언어, os 도 확인을 할 수 있다. 문제풀이에 앞서 탐색전을 하기에 유용하다.
 
 <figure>
-     <a><img src="/_posts/img/2.png"></a>
+     <a><img src="./img/2.png"></a>
 </figure>
 
 
