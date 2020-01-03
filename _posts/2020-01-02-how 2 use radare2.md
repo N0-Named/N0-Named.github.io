@@ -73,14 +73,14 @@ Radare2를 이용한 리버스 엔지니어링을 Araboza
 
 
 <figure class="half">
-    <a href="/_posts/img/1.png"><img src="/_posts/img/1.png"></a>
+    <a href="/assets/img/img/1.png"><img src="/assets/img/img/1.png"></a>
     <figcaption>Caption describing these two images.</figcaption>
 </figure>
 
 - 그 후 **aa**를 이용하여 본격적인 분석을 시작할 수 있다. **aa**는 Analyze All 의 약자로, 바이너리 전체를 돌아서 symbol 영역 등을 분석해주는 명령어이다. 이외에 **aaa**를 입력하면 **aa**를 포함한 **aar, aac** 등의 다양한 명령어들을 실행시켜준다. 
 
 
-![스크린샷 2019-12-04 오후 3.49.08](/_posts/img/3.png)
+![스크린샷 2019-12-04 오후 3.49.08](/assets/img/img/1.png)
 
 - **afl**명령어를 사용하면 해당 바이너리 내의 함수 목록을 표현해준다. 밑의 이미지에서 함수의 이름이 임의로  sym.~~로 표현되는데 이를 더 직관적으로 확인할 수 있도록 **afn |name| |addr|** 로 함수의 이름을 변경할 수 있다.
 
