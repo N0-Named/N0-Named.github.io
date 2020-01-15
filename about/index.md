@@ -12,6 +12,7 @@ comments: false
 * 2019 Junior Hacking Championship 장려상(스틸리언상) 수상
 * 2019 전국 고등학생 정보보안경진대회 3위
 * 2019 크리스마스 CTF 20위
+* 2020 시원포럼 세미나 "Intel SGX" 강연
 
 
 ## Project
