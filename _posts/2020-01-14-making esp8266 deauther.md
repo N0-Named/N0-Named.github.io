@@ -1,3 +1,13 @@
+---
+layout: post
+title: "making esp8266 deauther"
+date: 2020-01-24 
+excerpt: "ESP8266 NodeMCU을 이용해서 WIFI 공격 도구를 만들 수 있다."
+project: true
+tags: [reversing,pwnable,hacking,exploit,system,codegate]
+comments: false
+---
+
 **ESP8266 NodeMCU**을 이용해서 **WIFI** 공격 도구를 만들 수 있다.
 [https://github.com/spacehuhn/esp8266_deauther](https://github.com/spacehuhn/esp8266_deauther)
 
@@ -81,7 +91,7 @@ SPI방식의 oled 디스플레이를 구매하면, 연결해야되는 핀 개수
 
 .케이블에서 나온 전선 부분을 동그랗게 올가미 형태로 해주면 납땜이 잘 된다.
 
-![](ardu0-0.png) ![](ardu0-1.png)
+![](/assets/img/img2/ardu0-0.png) ![](/assets/img/img2/ardu0-1.png)
 
 스위치 하나를 SD3에 연결했다. 납땜 후 제대로 작동을 안해서,, 글루건으로 고정해주었다.
 
@@ -136,7 +146,7 @@ SPI방식의 oled 디스플레이를 구매하면, 연결해야되는 핀 개수
 -  **deauth**는 인증 해제
 
 - **beacon**은 가짜 와이파이를 비콘을 뿌린다. 연결을 시도하면 연결이 되지 않는다.
- ![](ardu0-2.jpg)
+ ![](/assets/img/img2/ardu0-2.jpg)
 
 어! 무료 와이파이이다! 하고 연결을 시도하면 연결이 되지 않는 공격
 
@@ -146,7 +156,7 @@ SPI방식의 oled 디스플레이를 구매하면, 연결해야되는 핀 개수
 -------------
 
 선택한 채널에 돌아다니는(?) 패킷의 양을 보여준다.
-![](ardu0-3.jpg)
+![](/assets/img/img2/ardu0-3.jpg)
 
  **CLOCK**
  ------------
