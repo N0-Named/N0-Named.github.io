@@ -23,4 +23,4 @@ comments: false
 
 if you want to join us...
       
-[Apply](https://github.com/TaylanTatli/Moon){: .btn}
+[Apply](https://forms.gle/2jVsCKxA8NitQTE97){: .btn}
