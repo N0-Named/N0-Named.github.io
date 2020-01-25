@@ -13,6 +13,7 @@ comments: false
 * 2019 전국 고등학생 정보보안경진대회 3위
 * 2019 크리스마스 CTF 20위
 * 2020 시원포럼 세미나 "Intel SGX" 강연
+* 2020 Riceteacatpanda CTF 99위
 
 
 ## Project
