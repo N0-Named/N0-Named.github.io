@@ -14,6 +14,8 @@ comments: false
 * 2019 크리스마스 CTF 20위
 * 2020 시원포럼 세미나 "Intel SGX" 강연
 * 2020 Riceteacatpanda CTF 99위
+* 2020 Newsecu Challenge 18위(Anti-Named팀)
+* 2020 Incognito 참가팀
 
 
 ## Project
