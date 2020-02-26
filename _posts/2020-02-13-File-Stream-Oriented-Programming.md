@@ -1,5 +1,3 @@
-## File Structure 
-
 File Stream Oriented Programming 의 기본은 File Structure 을 분석하는것으로 부터 시작된다.
 
 먼저, 기본적인 File Structure 를 보자.
