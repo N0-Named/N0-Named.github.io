@@ -9,8 +9,6 @@ frida를 이용한 후킹을 Araboza
 ---
 
 
-## frida를 이용한 안드로이드 hack
-
 
 
 # 간단한 소개
