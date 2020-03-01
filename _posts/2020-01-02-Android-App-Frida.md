@@ -6,9 +6,10 @@ tags: [reversing,pwnable,hacking,exploit,system]
 comments: false
 ---
 frida를 이용한 후킹을 Araboza
+---
 
 
-# frida를 이용한 안드로이드 hack
+## frida를 이용한 안드로이드 hack
 
 
 
