@@ -16,6 +16,7 @@ comments: false
 * 2020 Riceteacatpanda CTF 99위
 * 2020 Newsecu Challenge 18위(Anti-Named팀)
 * 2020 Incognito 참가팀
+* 2020 aeroCTF 57위
 
 
 ## Project
