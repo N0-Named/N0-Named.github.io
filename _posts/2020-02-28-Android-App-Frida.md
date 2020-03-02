@@ -12,7 +12,7 @@ Frida를 이용한 안드로이드 후킹을 Araboza
 
 
 
- **frida**는 DBI(Dynamic Binary Instrumentation) 프레임워크중 하나로 강력한 스크립팅을 제공하고 무료로 사용할 수 있다.  frida는 아래 구조로 동작하며 js 기반의 여러 언어의 스크립팅을 제공해주며 특히 파이썬이 가장 많이 이용한다. 또한,  구조상 양방향 통신을 하면서 명령을 주고받으며 동작하고 꼭 이런구조가아닌 내부적으로 동작 가능하다.
+> **frida**는 DBI(Dynamic Binary Instrumentation) 프레임워크중 하나로 강력한 스크립팅을 제공하고 무료로 사용할 수 있다.  frida는 아래 구조로 동작하며 js 기반의 여러 언어의 스크립팅을 제공해주며 특히 파이썬이 가장 많이 이용한다. 또한,  구조상 양방향 통신을 하면서 명령을 주고받으며 동작하고 꼭 이런구조가아닌 내부적으로 동작 가능하다.
 ![image-20200301222231888](/assets/img/img3/image-20200301222231888.png)
 
 
@@ -88,7 +88,6 @@ MainActivity$1() 내부 루틴에 system.exit를 발견 할 수 있었습니다.
 
 정리 해보자면 
 
-MainActivity -> onCreate ->  MainActivity.a -> MainActivity$1 -> MainActivity$1.onClick
 
 그래서 system.exit 함수를 frida를 통해 후킹하여 종료되지 않는 루틴으로 만들어 보겠습니다.
 
