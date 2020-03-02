@@ -231,4 +231,4 @@ https://www.codemetrix.io/hacking-android-apps-with-frida-1/
 
 https://github.com/OWASP/owasp-mstg
 
-[https://www.frida.re](https://www.frida.re/docs/building/)
+https://www.frida.re
