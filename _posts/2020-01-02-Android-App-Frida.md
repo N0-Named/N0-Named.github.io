@@ -1,15 +1,3 @@
----
-layout: post
-title: "Android-app-frida"
-date: 2020-03-02 
-tags: [reversing,pwnable,hacking,exploit,system,hook]
-comments: false
----
-Frida를 이용한 안드로이드 후킹을 Araboza
-
-
-# Frida를 이용한 안드로이드 후킹
-
 
 
 # 간단한 소개
