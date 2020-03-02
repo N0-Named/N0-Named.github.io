@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "ndroid-app-frida"
+title: "Android-app-frida"
 date: 2020-01-02 
-tags: [reversing,pwnable,hacking,exploit,system,codegate]
+tags: [reversing,pwnable,hacking,exploit,system,hook]
 comments: false
 ---
 Frida를 이용한 안드로이드 후킹을 Araboza
