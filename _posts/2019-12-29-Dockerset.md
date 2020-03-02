@@ -16,7 +16,7 @@ Docker를 사용하여 포너블과 바이너리 분석을 하기에 편리한 �
 ## Docker Image 파일
 처음 구축을 하기위해서 자료를 찾다가 유명하신 유튜버 LiveOverflow분이 Github에 올려둔 Image 파일을 발견하였습니다. 따로 Image를 만드는 번거로움을 줄이기 위해서 이 Image 파일을 이용해서 자신에 맞게 커스텀 해보겠습니다.
 
-> 아래의 링크를 통해서 파일을 다운받아주세요.
+아래의 링크를 통해서 파일을 다운받아주세요.
 
 [Image file Download](https://gist.github.com/LiveOverflow/b4502c5358a838d7ca9d92e8a2e8b5a0)
 
