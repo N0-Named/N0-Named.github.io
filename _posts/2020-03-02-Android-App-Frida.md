@@ -13,25 +13,25 @@ Frida를 이용한 안드로이드 후킹을 Araboza
 
 
 
-## Frida를 이용한 안드로이드 후킹
+/## Frida를 이용한 안드로이드 후킹
 
-### 간단한 소개
+/### 간단한 소개
 
-------
+/------
 
-> **frida**는 DBI(Dynamic Binary Instrumentation) 프레임워크중 하나로 강력한 스크립팅을 제공하고 무료로 사용할 수 있다.  frida는 아래 구조로 동작하며 js 기반의 여러 언어의 스크립팅을 제공해주며 특히 파이썬이 가장 많이 이용한다. 또한,  구조상 양방향 통신을 하면서 명령을 주고받으며 동작하고 꼭 이런구조가아닌 내부적으로 동작 가능하다.
+/> **frida**는 DBI(Dynamic Binary Instrumentation) 프레임워크중 하나로 강력한 스크립팅을 제공하고 무료로 사용할 수 있다.  frida는 아래 구조로 동작하며 js 기반의 여러 언어의 스크립팅을 제공해주며 특히 파이썬이 가장 많이 이용한다. 또한,  구조상 양방향 통신을 하면서 명령을 주고받으며 동작하고 꼭 이런구조가아닌 내부적으로 동작 가능하다.
 
 ![image-20200301222231888](/assets/img/img3/image-20200301222231888.png)
 
 
 
-## 개요 
+/## 개요 
 
 frida 자체의 사용법 보다  OWASP Uncrackable Crackme 문제들을 분석해보고 후킹을 통해 풀이를 할 것 입니다.
 
-------
+/------
 
-## 설치 
+/## 설치 
 
 
 
@@ -69,7 +69,7 @@ https://github.com/OWASP/owasp-mstg/tree/master/Crackmes
 
 
 
-## UnCrackable-Level1
+/## UnCrackable-Level1
 
  위 문제 1번 문제입니다. 먼저 실행 시켜 보면 아래 사진 처럼 루팅 탐지가 되어 종료가 되었다고 뜨며 ok 버튼을 눌르면 종료 됩니다.
 
@@ -225,7 +225,7 @@ except Exception as e:
 
 
 
-## 참고 
+/## 참고 
 
 https://www.codemetrix.io/hacking-android-apps-with-frida-1/
 
