@@ -2,12 +2,13 @@
 layout: post
 title: "LC-3(Little Computer 3)"
 date: 2020-02-28 
+excerpt: "LC-3(Little Computer 3)에 대해서 알아봅시다."
 tags: [ISA, LC-3]
 comments: false
 ---
-LC-3(Little Computer 3)에 대해서 알아봅시다.
 
-------
+
+
  
 # LC-3(Little Computer 3)에 대해서 알아봅시다.
 
