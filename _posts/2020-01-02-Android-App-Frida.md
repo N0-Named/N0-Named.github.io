@@ -1,3 +1,14 @@
+---
+layout: post
+title: "Android-app-frida"
+date: 2020-03-02 
+tags: [reversing,pwnable,hacking,exploit,system,hook]
+comments: false
+---
+Frida를 이용한 안드로이드 후킹을 Araboza
+
+
+# Frida를 이용한 안드로이드 후킹
 
 
 # 간단한 소개
@@ -55,7 +66,7 @@ https://github.com/OWASP/owasp-mstg/tree/master/Crackmes
 
 # UnCrackable-Level1
 
-> 위 문제 1번 문제입니다. 먼저 실행 시켜 보면 아래 사진 처럼 루팅 탐지가 되어 종료가 되었다고 뜨며 ok 버튼을 눌르면 종료 됩니다.
+ 위 문제 1번 문제입니다. 먼저 실행 시켜 보면 아래 사진 처럼 루팅 탐지가 되어 종료가 되었다고 뜨며 ok 버튼을 눌르면 종료 됩니다.
 
 ![image-20200302044536169](/assets/img/img3/image-20200302044536169.png)
 
@@ -123,7 +134,7 @@ except Exception as e:
     print(e)
 ```
 
-> 아래와 같이 정상적으로 후킹되어 dialog  메세지는 뜨지만 ok눌러도 종료되지 않습니다.
+ 아래와 같이 정상적으로 후킹되어 dialog  메세지는 뜨지만 ok눌러도 종료되지 않습니다.
 
 ![image-20200302075939437](/assets/img/img3/image-20200302075939437.png)
 
