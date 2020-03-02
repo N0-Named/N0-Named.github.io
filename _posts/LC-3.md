@@ -5,37 +5,37 @@ date: 2020-02-28
 tags: [ISA, LC-3]
 comments: false
 ---
-LC-3(Little Computer 3)¿¡ ´ëÇØ¼­ ¾Ë¾Æº¾½Ã´Ù.
+LC-3(Little Computer 3)ì— ëŒ€í•´ì„œ ì•Œì•„ë´…ì‹œë‹¤.
+
+------
+ 
+# LC-3(Little Computer 3)ì— ëŒ€í•´ì„œ ì•Œì•„ë´…ì‹œë‹¤.
 
 ------
 
-# LC-3(Little Computer 3)¿¡ ´ëÇØ¼­ ¾Ë¾Æº¾½Ã´Ù.
+# LC-3ëž€?
 
 ------
 
-# LC-3¶õ?
+> LC-3ëŠ” ì¼ì¢…ì˜ êµìœ¡ìš© í”„ë¡œê·¸ëž˜ë° ì–¸ì–´ë¡œ low-level í”„ë¡œê·¸ëž˜ë° ì–¸ì–´ìž…ë‹ˆë‹¤.
+
+> x86ë³´ë‹¨ ëœ ë³µìž¡í•˜ì§€ë§Œ ì–´ì…ˆë¸”ë¦¬ í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•˜ëŠ” ë° ì‚¬ìš©í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
+
+> Yale N. Pattê³¼ Sanjay J. Patelì— ì˜í•´ ê°œë°œë˜ì—ˆìŠµë‹ˆë‹¤.
 
 ------
 
-> LC-3´Â ÀÏÁ¾ÀÇ ±³À°¿ë ÇÁ·Î±×·¡¹Ö ¾ð¾î·Î low-level ÇÁ·Î±×·¡¹Ö ¾ð¾îÀÔ´Ï´Ù.
-
-> x86º¸´Ü ´ú º¹ÀâÇÏÁö¸¸ ¾î¼Àºí¸® ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ´Â µ¥ »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù.
-
-> Yale N. Patt°ú Sanjay J. Patel¿¡ ÀÇÇØ °³¹ßµÇ¾ú½À´Ï´Ù.
-
-------
-
-# LC-3 ½Ã¹Ä·¹ÀÌÅÍ & ¿¡µðÅÍ
+# LC-3 ì‹œë®¬ë ˆì´í„° & ì—ë””í„°
 
 ------
 
 http://highered.mheducation.com/sites/0072467509/student_view0/lc-3_simulator.html
 
-À§ ¸µÅ©¸¦ ÅëÇØ LC-3 Simulator & Eidtor¸¦ ´Ù¿î¹ÞÀ» ¼ö ÀÖ½À´Ï´Ù.
+ìœ„ ë§í¬ë¥¼ í†µí•´ LC-3 Simulator & Eidtorë¥¼ ë‹¤ìš´ë°›ì„ ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
 
 ------
 
-# ¸ñÂ÷
+# ëª©ì°¨
 
 ------
 
@@ -45,7 +45,7 @@ http://highered.mheducation.com/sites/0072467509/student_view0/lc-3_simulator.ht
 
 3. Opcodes
  
-4. Âü°í ¹®Çå
+4. ì°¸ê³  ë¬¸í—Œ
 
 
 ------
@@ -71,7 +71,7 @@ http://highered.mheducation.com/sites/0072467509/student_view0/lc-3_simulator.ht
 
 ------
 
-LC-3ÀÇ ¸Þ¸ð¸® ±¸Á¶´Â ¾Æ·¡¿Í °°½À´Ï´Ù.
+LC-3ì˜ ë©”ëª¨ë¦¬ êµ¬ì¡°ëŠ” ì•„ëž˜ì™€ ê°™ìŠµë‹ˆë‹¤.
 
 ![MemoryMap](/_posts/img/MemoryMap.jpg)
 
@@ -81,7 +81,7 @@ LC-3ÀÇ ¸Þ¸ð¸® ±¸Á¶´Â ¾Æ·¡¿Í °°½À´Ï´Ù.
 
 ------
 
-LC-3ÀÇ 16°¡Áö ¸í·É¾î·Î ±¸¼ºµÇ¾î ÀÖ½À´Ï´Ù.
+LC-3ì˜ 16ê°€ì§€ ëª…ë ¹ì–´ë¡œ êµ¬ì„±ë˜ì–´ ìžˆìŠµë‹ˆë‹¤.
 
 - BR (Branch)
 - ADD (Add)
@@ -100,11 +100,11 @@ LC-3ÀÇ 16°¡Áö ¸í·É¾î·Î ±¸¼ºµÇ¾î ÀÖ½À´Ï´Ù.
 - LEA (Load Effective Address)
 - TRAP (Execute Trap)
 
-LC-3 Instruction Set FormatÀÔ´Ï´Ù.
+LC-3 Instruction Set Formatìž…ë‹ˆë‹¤.
 
 ![InstructionSet.jpg](/_posts/img/InstructionSet.jpg)
 
-ÀÌ¹ø Æ÷½ºÆ®¿¡¼­´Â 7°¡Áö ¸í·É¾î¿¡ ´ëÇØ¼­  ´Ù·ïº¼ ¿¹Á¤ÀÔ´Ï´Ù.
+ì´ë²ˆ í¬ìŠ¤íŠ¸ì—ì„œëŠ” 7ê°€ì§€ ëª…ë ¹ì–´ì— ëŒ€í•´ì„œ  ë‹¤ë¤„ë³¼ ì˜ˆì •ìž…ë‹ˆë‹¤.
 
 ------
 
@@ -114,12 +114,12 @@ LC-3 Instruction Set FormatÀÔ´Ï´Ù.
 
 ![ADDAND.jpg](/_posts/img/ADDAND.jpg)
 
-ADD, AND ¸í·É¾î´Â 5¹øÂ° bit°¡ 0ÀÏ °æ¿ì 3°³ÀÇ ·¹Áö½ºÅÍ¸¦ »ç¿ëÇÏ¿© ¿¬»êÀ» ÁøÇàÇÕ´Ï´Ù.
+ADD, AND ëª…ë ¹ì–´ëŠ” 5ë²ˆì§¸ bitê°€ 0ì¼ ê²½ìš° 3ê°œì˜ ë ˆì§€ìŠ¤í„°ë¥¼ ì‚¬ìš©í•˜ì—¬ ì—°ì‚°ì„ ì§„í–‰í•©ë‹ˆë‹¤.
 
 - DR = SR1 + SR2
 - DR = SR1 & SR2
 
-ADD, AND ¸í·É¾î´Â 5¹øÂ° bit°¡ 1ÀÏ °æ¿ì 2°³ÀÇ ·¹Áö½ºÅÍ¿Í 1°³ÀÇ imm¸¦ »ç¿ëÇÏ¿© ¿¬»êÀ» ÁøÇàÇÕ´Ï´Ù.
+ADD, AND ëª…ë ¹ì–´ëŠ” 5ë²ˆì§¸ bitê°€ 1ì¼ ê²½ìš° 2ê°œì˜ ë ˆì§€ìŠ¤í„°ì™€ 1ê°œì˜ immë¥¼ ì‚¬ìš©í•˜ì—¬ ì—°ì‚°ì„ ì§„í–‰í•©ë‹ˆë‹¤.
 
 - DR = SR1 + imm5
 - DR = SR1 & imm5
@@ -132,7 +132,7 @@ ADD, AND ¸í·É¾î´Â 5¹øÂ° bit°¡ 1ÀÏ °æ¿ì 2°³ÀÇ ·¹Áö½ºÅÍ¿Í 1°³ÀÇ imm¸¦ »ç¿ëÇÏ¿© ¿¬»
 
 ![NOT.jpg](/_posts/img/NOT.jpg)
 
-NOT ¸í·É¾î´Â 2°³ÀÇ ·¹Áö½ºÅÍ¸¦ »ç¿ëÇÏ¿© ¿¬»êÀ» ÁøÇàÇÕ´Ï´Ù.
+NOT ëª…ë ¹ì–´ëŠ” 2ê°œì˜ ë ˆì§€ìŠ¤í„°ë¥¼ ì‚¬ìš©í•˜ì—¬ ì—°ì‚°ì„ ì§„í–‰í•©ë‹ˆë‹¤.
 
 - DR = ~SR
 
@@ -144,7 +144,7 @@ NOT ¸í·É¾î´Â 2°³ÀÇ ·¹Áö½ºÅÍ¸¦ »ç¿ëÇÏ¿© ¿¬»êÀ» ÁøÇàÇÕ´Ï´Ù.
 
 ![LDRSTR.jpg](/_posts/img/LDRSTR.jpg)
 
-LDR, STR ¸í·É¾î´Â 2°³ÀÇ ·¹Áö½ºÅÍ¿Í 1°³ÀÇ offsetÀ» »ç¿ëÇÏ¿© ¸Þ¸ð¸®¿¡ Á¢±ÙÇÕ´Ï´Ù.
+LDR, STR ëª…ë ¹ì–´ëŠ” 2ê°œì˜ ë ˆì§€ìŠ¤í„°ì™€ 1ê°œì˜ offsetì„ ì‚¬ìš©í•˜ì—¬ ë©”ëª¨ë¦¬ì— ì ‘ê·¼í•©ë‹ˆë‹¤.
 
 - DR = memory[BaseR + offset6]
 - memory[BaseR + offset6] = SR
@@ -157,7 +157,7 @@ LDR, STR ¸í·É¾î´Â 2°³ÀÇ ·¹Áö½ºÅÍ¿Í 1°³ÀÇ offsetÀ» »ç¿ëÇÏ¿© ¸Þ¸ð¸®¿¡ Á¢±ÙÇÕ´Ï´Ù.
 
 ![JMP.jpg](/_posts/img/JMP.jpg)
 
-JMP ¸í·É¾î´Â 1°³ÀÇ ·¹Áö½ºÅÍ¸¦ »ç¿ëÇÏ¿© PC ·¹Áö½ºÅÍÀÇ °ªÀ» ¼öÁ¤ÇÕ´Ï´Ù.
+JMP ëª…ë ¹ì–´ëŠ” 1ê°œì˜ ë ˆì§€ìŠ¤í„°ë¥¼ ì‚¬ìš©í•˜ì—¬ PC ë ˆì§€ìŠ¤í„°ì˜ ê°’ì„ ìˆ˜ì •í•©ë‹ˆë‹¤.
 
 - PC = BaseR
 
@@ -169,14 +169,14 @@ JMP ¸í·É¾î´Â 1°³ÀÇ ·¹Áö½ºÅÍ¸¦ »ç¿ëÇÏ¿© PC ·¹Áö½ºÅÍÀÇ °ªÀ» ¼öÁ¤ÇÕ´Ï´Ù.
 
 ![BR.jpg](/_posts/img/BR.jpg)
 
-condition flag register »óÅÂ¿¡ µû¶ó PC ·¹Áö½ºÅÍÀÇ °ªÀ» ¼öÁ¤ÇÕ´Ï´Ù.
+condition flag register ìƒíƒœì— ë”°ë¼ PC ë ˆì§€ìŠ¤í„°ì˜ ê°’ì„ ìˆ˜ì •í•©ë‹ˆë‹¤.
 
 - if(conditionRegister[n] == n &&  conditionRegister[z] == z && conditionRegister[p] == p)
 -   PC += PCoffset9
 
 ------
 
-# Âü°í ¹®Çå
+# ì°¸ê³  ë¬¸í—Œ
 
 ------
 
