@@ -26,7 +26,7 @@ Radare2를 이용한 리버스 엔지니어링을 Araboza
 
 ------
 
-~~~bash
+~~~ bash
 1. $  git clone https://github.com/radare/radare2.git
 2. $  cd radare2/sys/
 3. $  ./install.sh
@@ -418,7 +418,7 @@ r2용 find 툴~
 - 기본으로는 아래와 같이 sha256으로 설정
 
 
-> ~~~haxe
+> ~~~ haxe
 > $ rahash2 ./KingMaker
 > ./KingMaker: 0x00000000-0x000079af 
 > sha256: 44d00c9ae24574b8d8e1f94e58c84913f5bd5356ba36a5d1ed65b174d9556150
