@@ -1,3 +1,12 @@
+---
+layout: post
+title: "How to Calculate Sum of count for divisors?"
+date: 2020-01-30    
+tags: [algorithm,programming,number theory,math,code]
+comments: false
+---
+
+
 이 글에서는 NYPC 2019 예선 문제 **약수**를 기반으로 어떻게 약수 개수의 합을 효율적으로 구할 수 있는가를 알아본다.
 
 우리의 주요 관심사는
