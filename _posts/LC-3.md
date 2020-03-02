@@ -10,7 +10,6 @@ comments: false
 
 
  
-# LC-3(Little Computer 3)에 대해서 알아봅시다.
 
 ------
 
