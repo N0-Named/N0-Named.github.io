@@ -17,7 +17,9 @@ comments: false
 * 2020 Newsecu Challenge 18위(Anti-Named팀)
 * 2020 Incognito 참가팀
 * 2020 aeroCTF 57위
-* 2020 제1회 정보보호연합 세미나 "LC-3 & Reverse Engineering" 강연
+* 2020 정보보호연합세미나 "LC-3 & Reversing" 강연
+* 2020 Incognito 소양교육 리버싱 강의
+* 2020 Incognito 소양교육 웹해킹 강의 
 
 
 ## Project
