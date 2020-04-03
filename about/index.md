@@ -23,7 +23,7 @@ comments: false
 
 
 ## Project
-
+* N0Named Wargame Close Beta > [go](http://no-named.kr){: .btn}
 
 
 ## Join us
