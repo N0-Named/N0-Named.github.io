@@ -6,7 +6,7 @@ tags: [IDC, tutorial]
 comments: false
 ---
 
-# IDC에 대해서 알아봅시다.
+IDC에 대해서 알아봅시다.
 
 ---
 
