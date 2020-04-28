@@ -1,11 +1,10 @@
 ---
 layout: post
-title: "IDC에 대해서 알아봅시다."
-date: 2020-02-28 
-tags: [IDC, tutorial]
+title: "About IDC"
+date: 2020-02-28    
+tags: [reversing,ida,idc]
 comments: false
 ---
-
 IDC에 대해서 알아봅시다.
 
 ---
