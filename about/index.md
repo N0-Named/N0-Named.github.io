@@ -20,6 +20,9 @@ comments: false
 * 2020 정보보호연합세미나 "LC-3 & Reversing" 강연
 * 2020 Incognito 소양교육 리버싱 강의
 * 2020 Incognito 소양교육 웹해킹 강의 
+* 2020 Incognito Iot & ICT Threat hunting 참가
+* 2020 no-named wargame 운영
+
 
 
 ## Project
