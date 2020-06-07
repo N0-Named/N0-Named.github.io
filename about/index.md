@@ -22,6 +22,7 @@ comments: false
 * 2020 Incognito 소양교육 웹해킹 강의 
 * 2020 Incognito Iot & ICT Threat hunting 참가
 * 2020 no-named wargame 운영
+* 2020 Defenit CTF 27위
 
 
 
