@@ -23,6 +23,8 @@ comments: false
 * 2020 Incognito Iot & ICT Threat hunting 참가
 * 2020 no-named wargame 운영
 * 2020 Defenit CTF 27위
+* 2020 정보보안팀연합 Halliance 오픈 세미나 운영
+* 2020 서울여자대학교 SWING CTF 문제 출제 및 운영
 
 
 
