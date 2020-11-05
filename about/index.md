@@ -25,6 +25,7 @@ comments: false
 * 2020 Defenit CTF 27위
 * 2020 정보보안팀연합 Halliance 오픈 세미나 운영
 * 2020 서울여자대학교 SWING CTF 문제 출제 및 운영
+* 2020 금융보안 위협분석 대회 장려상 수상
 
 
 
