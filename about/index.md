@@ -13,10 +13,8 @@ comments: false
 * 2019 전국 고등학생 정보보안경진대회 3위
 * 2019 크리스마스 CTF 20위
 * 2020 시원포럼 세미나 "Intel SGX" 강연
-* 2020 Riceteacatpanda CTF 99위
 * 2020 Newsecu Challenge 18위(Anti-Named팀)
 * 2020 Incognito 참가팀
-* 2020 aeroCTF 57위
 * 2020 정보보호연합세미나 "LC-3 & Reversing" 강연
 * 2020 Incognito 소양교육 리버싱 강의
 * 2020 Incognito 소양교육 웹해킹 강의 
@@ -27,9 +25,11 @@ comments: false
 * 2020 서울여자대학교 SWING CTF 문제 출제 및 운영
 * 2020 금융보안 위협분석 대회 장려상 수상
 * 2020 한국교통안전공단 해킹대회 대상
+* 2020 부천덕산고등학교 화이트해커 진로강의
 * 2020 한국남부발전 웹보안경진대회 우수상
 * 2020 전국고등학생보안경진대회 금상
 * 2020 중고생 정보보호올림피아드 동상
+* 2021 Incognito 참가팀
 
 
 ## Project
