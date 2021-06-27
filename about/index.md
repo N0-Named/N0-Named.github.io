@@ -30,7 +30,8 @@ comments: false
 * 2020 전국고등학생보안경진대회 금상
 * 2020 중고생 정보보호올림피아드 동상
 * 2021 Incognito 참가팀
-
+* 2021 이화여자대학교 ECOPS CTF 문제 출제 및 운영
+* 2021 서울여자대학교 SWING CTF 문제 출제 및 운영
 
 ## Project
 * N0Named Wargame Close Beta > [go](http://no-named.kr){: .btn}
